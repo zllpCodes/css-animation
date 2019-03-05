@@ -1,0 +1,40 @@
+// 动画部分
+@keyframes slideInDownOuter {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 50px;
+    }
+}
+
+@keyframes slideInDownInner {
+    10% {
+        padding: 0 15px;
+    }
+
+    to {
+        padding: 15px;
+    }
+}
+
+.alert-info {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    z-index: 99;
+    overflow: hidden;
+    background-color: #FFF9E7;
+    animation: slideInDownOuter .8s linear;
+
+    p {
+        padding: 15px;
+        margin: 0;
+        animation: slideInDownInner .8s linear;
+    }
+
+    span {
+        color: #FF6700;
+    }
+}

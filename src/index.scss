@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+.banner,
+ul {
+    padding: 15px;
+    margin: 0;
+    list-style: none;
+
+    span {
+        display: block;
+    }
+
+    img {
+        width: 100%;
+    }
+}
