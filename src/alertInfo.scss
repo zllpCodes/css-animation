@@ -1,5 +1,6 @@
 // 动画部分
 @keyframes slideInDownOuter {
+    // 从0%开始到100%的变化
     from {
         height: 0;
     }
@@ -22,10 +23,14 @@
 .alert-info {
     width: 100%;
     height: 50px;
+    // 固定顶部
     top: 0;
+    // 让提示框展示在最上层
     z-index: 99;
+    // 必须属性，让内部元素在展开前不至于显露出来
     overflow: hidden;
     background-color: #FFF9E7;
+    // 引用动画名 动画执行完成所需的时间 动画执行的效果
     animation: slideInDownOuter .8s linear;
 
     p {

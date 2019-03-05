@@ -3,20 +3,25 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- 控制布局 使页面能够进行合适的缩放和平移 -->
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <!-- 静态资源不需要写/dist路径 -->
     <link href="/common.css" type="text/css" rel="stylesheet" />
     <title>css animation</title>
 </head>
 
 <body>
+    <!-- 为了展示效果 -->
     <div class="banner">
         <img src="https://zhanglinlin-site-1258125238.cos.ap-beijing.myqcloud.com/%E5%B0%8F%E7%8E%8B%E5%AD%90.jpg" />
     </div>
+    <!-- 页面滚动会触顶固定且开始时有sliceInDown的动画效果 -->
     <div class="alert-info-wrapper">
         <div class="alert-info">
             <p>我是提示信息框，<span>嘻嘻</span></p>
         </div>
     </div>
+    <!-- 为了展示效果 -->
     <ul>
         <li>
             <span>向下滚动</span>

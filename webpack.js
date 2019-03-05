@@ -9,6 +9,7 @@ module.exports = {
     // 输出路径为dist，输出的文件为index.js
     output: {
         publicPath: '/',
+        // 默认当前静态资源的路径，在html中引用不需要再写dist
         path: path.resolve(__dirname, 'dist/'),
         filename: 'index.js'
     },
@@ -22,9 +23,12 @@ module.exports = {
         open: 'http://localhost:8899/',
         host: '0.0.0.0'
     },
-    // 将es6语法的js文件转换为浏览器可以理解的语法
+    // loader 被用于转换某些类型的模块，而插件则可以用于执行范围更广的任务
+    // 插件的范围包括：打包优化、资源管理和注入环境变量
+    // loader是针对某个文件，而plugin是针对整个打包流程
     module: {
         loaders: [
+            // 将es6语法的js文件转换为浏览器可以理解的语法
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -35,6 +39,7 @@ module.exports = {
                     }
                 }]
             },
+            // 将sass转为css
             {
                 test: /\.(scss|sass)$/,
                 loader: ExtractTextPlugin.extract({
@@ -50,6 +55,7 @@ module.exports = {
         ]
     },
     plugins: [
+        // 将静态文件独立打包到css文件内
         new ExtractTextPlugin({
             filename: `common.css`
         })
